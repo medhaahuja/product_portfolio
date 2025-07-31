@@ -44,7 +44,6 @@ export default function Home() {
       <ExperienceSection />
       <AchievementsSection />
       <LinkedInSection />
-      <ContactSection />
       <Footer />
     </div>
   );

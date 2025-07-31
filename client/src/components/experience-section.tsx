@@ -66,13 +66,15 @@ export default function ExperienceSection() {
               key={index}
               className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 ${exp.borderColor} ${exp.hoverBorderColor} border rounded-2xl p-8 transition-all duration-300`}
             >
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
+              <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                    <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
+                    <div className={`${exp.iconColor.replace('text-', 'bg-')}/20 ${exp.iconColor} px-4 py-2 rounded-full text-sm font-medium mb-2 lg:mb-0 lg:ml-4 inline-block`}>
+                      {exp.duration}
+                    </div>
+                  </div>
                   <p className={`${exp.iconColor} text-lg font-semibold`}>{exp.company} - {exp.location}</p>
-                </div>
-                <div className={`${exp.iconColor.replace('text-', 'bg-')}/20 ${exp.iconColor} px-4 py-2 rounded-full text-sm font-medium mt-4 lg:mt-0`}>
-                  {exp.duration}
                 </div>
               </div>
               <ul className="space-y-3 text-gray-300">

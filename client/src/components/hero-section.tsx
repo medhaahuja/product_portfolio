@@ -8,8 +8,8 @@ export default function HeroSection() {
     }
   };
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
+  const scrollToLinkedIn = () => {
+    const element = document.getElementById('linkedin');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -23,8 +23,6 @@ export default function HeroSection() {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold">
-                <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Hi, I'm</span>
-                <br />
                 <span className="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">Medha Ahuja</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl font-semibold text-gray-200">AI-Focused Product Manager</h2>
@@ -40,10 +38,10 @@ export default function HeroSection() {
                 View My Work
               </button>
               <button 
-                onClick={scrollToContact}
+                onClick={scrollToLinkedIn}
                 className="border border-gray-600 text-white px-8 py-3 rounded-full font-medium hover:border-purple hover:text-purple transition-all duration-300"
               >
-                Get In Touch
+                Connect on LinkedIn
               </button>
             </div>
           </div>
