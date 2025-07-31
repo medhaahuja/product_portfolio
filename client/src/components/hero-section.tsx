@@ -19,8 +19,8 @@ export default function HeroSection() {
     <section id="home" className="min-h-screen flex items-center relative">
       <div className="absolute inset-0 gradient-radial-hero"></div>
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-in">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex-1 space-y-8 animate-fade-in lg:order-1">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold">
                 <span className="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">Medha Ahuja</span>
@@ -45,7 +45,7 @@ export default function HeroSection() {
               </button>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end animate-slide-up">
+          <div className="flex-shrink-0 animate-slide-up lg:order-2">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple to-pink rounded-full blur-2xl opacity-30 animate-pulse"></div>
               <img 
