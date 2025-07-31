@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       tags: ["Market Research", "Strategy", "Analytics"],
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-purple-pink",
-      link: "mailto:medhaahuja20@gmail.com?subject=Request%20for%20B2C%20Commerce%20Strategy%20Document&body=Hi%20Medha,%0A%0AI%20would%20like%20to%20view%20your%20B2C%20Commerce%20Strategy%20document.%20Could%20you%20please%20share%20it%20with%20me?%0A%0AThank%20you!"
+      link: "https://drive.google.com/file/d/1o-bK4mWDemCiVYK2YfMtkurgJDv-CfvW/view"
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export default function ProjectsSection() {
       tags: ["UX Design", "User Research", "Optimization"],
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-blue-purple",
-      link: "mailto:medhaahuja20@gmail.com?subject=Request%20for%20Canva%20Onboarding%20Analysis&body=Hi%20Medha,%0A%0AI%20would%20like%20to%20view%20your%20Canva%20onboarding%20improvement%20analysis.%20Could%20you%20please%20share%20it%20with%20me?%0A%0AThank%20you!"
+      link: "https://drive.google.com/file/d/1LPGMdXDYUvtfp-1dqFYgU5ZtKDKzUy9k/view"
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function ProjectsSection() {
       tags: ["AI/ML", "FinTech", "Data Analytics"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-pink-orange",
-      link: "mailto:medhaahuja20@gmail.com?subject=Request%20for%20Account%20Aggregator%20Tool%20Document&body=Hi%20Medha,%0A%0AI%20would%20like%20to%20view%20your%20Account%20Aggregator%20Insights%20Tool%20document.%20Could%20you%20please%20share%20it%20with%20me?%0A%0AThank%20you!"
+      link: "https://drive.google.com/file/d/11aaEXZpHLACQtSIZZINleSCIXRr9rK6c/view"
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ export default function ProjectsSection() {
       tags: ["PRD", "Mobile App", "Community"],
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-purple-blue",
-      link: "mailto:medhaahuja20@gmail.com?subject=Request%20for%20Co-working%20Space%20App%20PRD&body=Hi%20Medha,%0A%0AI%20would%20like%20to%20view%20your%20Co-working%20Space%20App%20PRD.%20Could%20you%20please%20share%20it%20with%20me?%0A%0AThank%20you!"
+      link: "https://drive.google.com/file/d/17s-KE-4INfUWMWKrBAAyHgxaujM38IqS/view"
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
       tags: ["Product Analysis", "UX Audit", "FinTech"],
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-orange-pink",
-      link: "mailto:medhaahuja20@gmail.com?subject=Request%20for%20Splitwise%20Product%20Teardown&body=Hi%20Medha,%0A%0AI%20would%20like%20to%20view%20your%20Splitwise%20product%20teardown%20analysis.%20Could%20you%20please%20share%20it%20with%20me?%0A%0AThank%20you!"
+      link: "https://drive.google.com/file/d/1bXmWQzU1Eo9k8EydIhwtB4dyhKz0zHDS/view"
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ export default function ProjectsSection() {
       tags: ["AI Recommendations", "Food Tech", "UX Innovation"],
       image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-blue-purple",
-      link: "mailto:medhaahuja20@gmail.com?subject=Request%20for%20Swiggy%20Solution%20Document&body=Hi%20Medha,%0A%0AI%20would%20like%20to%20view%20your%20Swiggy%20'What%20to%20Eat'%20solution%20document.%20Could%20you%20please%20share%20it%20with%20me?%0A%0AThank%20you!"
+      link: "https://drive.google.com/file/d/1souul29ZLozinVbvWULzEssygO0iGIaJ/view"
     },
     {
       id: 7,
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
       tags: ["Revenue Growth", "E-commerce", "Strategy"],
       image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-pink-orange",
-      link: "mailto:medhaahuja20@gmail.com?subject=Request%20for%20Blinkit%20AOV%20Strategy&body=Hi%20Medha,%0A%0AI%20would%20like%20to%20view%20your%20Blinkit%20AOV%20increase%20strategy%20document.%20Could%20you%20please%20share%20it%20with%20me?%0A%0AThank%20you!"
+      link: "https://drive.google.com/file/d/1nuKFZ3CYsKgVm_hyWO5wS2Bx0SwphZT3/view"
     }
   ];
 
