@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 space-y-8 animate-fade-in lg:order-1">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold">
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">Medha Ahuja</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl font-semibold text-gray-200">AI-Focused Product Manager</h2>

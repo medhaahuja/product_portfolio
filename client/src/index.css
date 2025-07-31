@@ -123,6 +123,16 @@
     border-color: hsl(217, 91%, 60%);
   }
   
+  .from-purple {
+    --tw-gradient-from: hsl(267, 84%, 64%);
+    --tw-gradient-to: rgb(139 92 246 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  
+  .to-pink {
+    --tw-gradient-to: hsl(330, 81%, 60%);
+  }
+  
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }

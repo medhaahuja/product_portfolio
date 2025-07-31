@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       tags: ["Market Research", "Strategy", "Analytics"],
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-purple-pink",
-      link: "https://drive.google.com/file/d/1o-bK4mWDemCiVYK2YfMtkurgJDv-CfvW/view?usp=sharing"
+      link: "https://docs.google.com/document/d/1o-bK4mWDemCiVYK2YfMtkurgJDv-CfvW/edit?usp=sharing"
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export default function ProjectsSection() {
       tags: ["UX Design", "User Research", "Optimization"],
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-blue-purple",
-      link: "https://drive.google.com/file/d/1LPGMdXDYUvtfp-1dqFYgU5ZtKDKzUy9k/view?usp=sharing"
+      link: "https://docs.google.com/document/d/1LPGMdXDYUvtfp-1dqFYgU5ZtKDKzUy9k/edit?usp=sharing"
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function ProjectsSection() {
       tags: ["AI/ML", "FinTech", "Data Analytics"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-pink-orange",
-      link: "https://drive.google.com/file/d/11aaEXZpHLACQtSIZZINleSCIXRr9rK6c/view?usp=sharing"
+      link: "https://docs.google.com/document/d/11aaEXZpHLACQtSIZZINleSCIXRr9rK6c/edit?usp=sharing"
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ export default function ProjectsSection() {
       tags: ["PRD", "Mobile App", "Community"],
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-purple-blue",
-      link: "https://drive.google.com/file/d/17s-KE-4INfUWMWKrBAAyHgxaujM38IqS/view?usp=sharing"
+      link: "https://docs.google.com/document/d/17s-KE-4INfUWMWKrBAAyHgxaujM38IqS/edit?usp=sharing"
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
       tags: ["Product Analysis", "UX Audit", "FinTech"],
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-orange-pink",
-      link: "https://drive.google.com/file/d/1bXmWQzU1Eo9k8EydIhwtB4dyhKz0zHDS/view?usp=sharing"
+      link: "https://docs.google.com/document/d/1bXmWQzU1Eo9k8EydIhwtB4dyhKz0zHDS/edit?usp=sharing"
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ export default function ProjectsSection() {
       tags: ["AI Recommendations", "Food Tech", "UX Innovation"],
       image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-blue-purple",
-      link: "https://drive.google.com/file/d/1souul29ZLozinVbvWULzEssygO0iGIaJ/view?usp=sharing"
+      link: "https://docs.google.com/document/d/1souul29ZLozinVbvWULzEssygO0iGIaJ/edit?usp=sharing"
     },
     {
       id: 7,
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
       tags: ["Revenue Growth", "E-commerce", "Strategy"],
       image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradientClass: "gradient-pink-orange",
-      link: "https://drive.google.com/file/d/1nuKFZ3CYsKgVm_hyWO5wS2Bx0SwphZT3/view?usp=sharing"
+      link: "https://docs.google.com/document/d/1nuKFZ3CYsKgVm_hyWO5wS2Bx0SwphZT3/edit?usp=sharing"
     }
   ];
 
@@ -145,6 +145,8 @@ export default function ProjectsSection() {
                 </div>
                 <a
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 text-center backdrop-blur-sm inline-flex items-center justify-center gap-2"
                 >
                   View Project
