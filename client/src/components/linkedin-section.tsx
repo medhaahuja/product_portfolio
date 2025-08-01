@@ -4,12 +4,32 @@ export default function LinkedInSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">LinkedIn Insights</span>
+            <span className="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">Recent LinkedIn Insights</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple to-pink mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Follow my journey and insights on product management, AI, and strategic thinking
+            Latest thoughts on AI, product management, and strategic thinking
           </p>
+        </div>
+
+        {/* Statistics Section */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="bg-gradient-to-br from-purple/20 to-pink/20 border border-purple/30 rounded-xl p-6 text-center">
+            <div className="text-3xl lg:text-4xl font-bold text-purple mb-2">3+</div>
+            <div className="text-white text-sm">Years Experience</div>
+          </div>
+          <div className="bg-gradient-to-br from-blue/20 to-purple/20 border border-blue/30 rounded-xl p-6 text-center">
+            <div className="text-3xl lg:text-4xl font-bold text-blue mb-2">7</div>
+            <div className="text-white text-sm">Major Projects</div>
+          </div>
+          <div className="bg-gradient-to-br from-pink/20 to-orange/20 border border-pink/30 rounded-xl p-6 text-center">
+            <div className="text-3xl lg:text-4xl font-bold text-pink mb-2">500+</div>
+            <div className="text-white text-sm">LinkedIn Connections</div>
+          </div>
+          <div className="bg-gradient-to-br from-orange/20 to-yellow/20 border border-orange/30 rounded-xl p-6 text-center">
+            <div className="text-3xl lg:text-4xl font-bold text-orange mb-2">10K+</div>
+            <div className="text-white text-sm">Platform Users Reached</div>
+          </div>
         </div>
 
         <div className="bg-gradient-to-br from-purple/10 to-pink/10 border border-purple/30 rounded-2xl p-8 text-center max-w-2xl mx-auto">
