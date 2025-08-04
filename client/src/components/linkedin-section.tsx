@@ -13,22 +13,18 @@ export default function LinkedInSection() {
         </div>
 
         {/* Statistics Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
           <div className="bg-gradient-to-br from-purple/20 to-pink/20 border border-purple/30 rounded-xl p-6 text-center">
             <div className="text-3xl lg:text-4xl font-bold text-purple mb-2">3+</div>
             <div className="text-white text-sm">Years Experience</div>
           </div>
           <div className="bg-gradient-to-br from-blue/20 to-purple/20 border border-blue/30 rounded-xl p-6 text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-blue mb-2">7</div>
+            <div className="text-3xl lg:text-4xl font-bold text-blue mb-2">20+</div>
             <div className="text-white text-sm">Major Projects</div>
           </div>
           <div className="bg-gradient-to-br from-pink/20 to-orange/20 border border-pink/30 rounded-xl p-6 text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-pink mb-2">500+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-pink mb-2">3000+</div>
             <div className="text-white text-sm">LinkedIn Connections</div>
-          </div>
-          <div className="bg-gradient-to-br from-orange/20 to-yellow/20 border border-orange/30 rounded-xl p-6 text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-orange mb-2">10K+</div>
-            <div className="text-white text-sm">Platform Users Reached</div>
           </div>
         </div>
 
