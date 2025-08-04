@@ -7,36 +7,56 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
+      title: "AI User Research",
+      description: "Advanced AI-powered user research platform that automates data collection, analysis, and insights generation for product teams.",
+      category: "ai",
+      tags: ["AI/ML", "User Research", "Automation"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      gradientClass: "gradient-purple-pink",
+      link: "https://productsuite.netlify.app/"
+    },
+    {
+      id: 2,
+      title: "AI Bot for Your Docs",
+      description: "Intelligent documentation assistant that uses AI to help users find, understand, and navigate through complex documentation.",
+      category: "ai",
+      tags: ["AI/ML", "Documentation", "Chatbot"],
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      gradientClass: "gradient-blue-purple",
+      link: "https://productsuite.netlify.app/"
+    },
+    {
+      id: 3,
       title: "B2C Quick Commerce Strategy",
       description: "Comprehensive market analysis and strategic framework for quick commerce expansion, focusing on customer acquisition and retention strategies.",
       category: "strategy",
       tags: ["Market Research", "Strategy", "Analytics"],
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      gradientClass: "gradient-purple-pink",
+      gradientClass: "gradient-pink-orange",
       link: "https://drive.google.com/file/d/1o-bK4mWDemCiVYK2YfMtkurgJDv-CfvW/view"
     },
     {
-      id: 2,
+      id: 4,
       title: "Improve Canva Onboarding",
       description: "UX analysis and optimization recommendations for Canva's user onboarding flow to reduce drop-offs and improve activation rates.",
       category: "product",
       tags: ["UX Design", "User Research", "Optimization"],
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      gradientClass: "gradient-blue-purple",
+      gradientClass: "gradient-green-blue",
       link: "https://drive.google.com/file/d/1LPGMdXDYUvtfp-1dqFYgU5ZtKDKzUy9k/view"
     },
     {
-      id: 3,
+      id: 5,
       title: "Account Aggregator Insights Tool",
       description: "AI-powered financial analytics platform that aggregates account data to provide personalized insights and recommendations.",
       category: "ai",
       tags: ["AI/ML", "FinTech", "Data Analytics"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      gradientClass: "gradient-pink-orange",
+      gradientClass: "gradient-purple-pink",
       link: "https://drive.google.com/file/d/11aaEXZpHLACQtSIZZINleSCIXRr9rK6c/view"
     },
     {
-      id: 4,
+      id: 6,
       title: "PRD Co-working Space App",
       description: "Comprehensive Product Requirements Document for a co-working space management application with booking and community features.",
       category: "product",
@@ -46,7 +66,7 @@ export default function ProjectsSection() {
       link: "https://drive.google.com/file/d/17s-KE-4INfUWMWKrBAAyHgxaujM38IqS/view"
     },
     {
-      id: 5,
+      id: 7,
       title: "Splitwise Product Teardown",
       description: "In-depth analysis of Splitwise's product features, user experience, and competitive positioning with improvement recommendations.",
       category: "product",
@@ -56,7 +76,7 @@ export default function ProjectsSection() {
       link: "https://drive.google.com/file/d/1bXmWQzU1Eo9k8EydIhwtB4dyhKz0zHDS/view"
     },
     {
-      id: 6,
+      id: 8,
       title: "Swiggy 'What to Eat' Solution",
       description: "AI-powered food recommendation system to solve decision fatigue and improve order completion rates through personalized suggestions.",
       category: "ai",
@@ -66,7 +86,7 @@ export default function ProjectsSection() {
       link: "https://drive.google.com/file/d/1souul29ZLozinVbvWULzEssygO0iGIaJ/view"
     },
     {
-      id: 7,
+      id: 9,
       title: "Increase Blinkit's AOV",
       description: "Strategic initiatives to increase Average Order Value through bundling, cross-selling, and personalized recommendations.",
       category: "strategy",
