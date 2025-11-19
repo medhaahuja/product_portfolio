@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern React portfolio website for Medha Ahuja, an AI-focused Product Manager. The application is built using a full-stack architecture with React frontend, Express.js backend, and is configured for deployment on Replit. The project showcases a professional portfolio with multiple sections including hero, about, projects, experience, achievements, LinkedIn integration, and contact.
+This is a modern React portfolio website for Medha Ahuja, an AI-focused Product Manager. The application is built using a full-stack architecture with React frontend, Express.js backend, and is configured for deployment on Replit. The project showcases a professional portfolio with multiple sections including hero, about, projects, experience, a single LinkedIn highlights section, and contact.
 
 ## User Preferences
 

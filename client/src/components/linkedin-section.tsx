@@ -4,7 +4,7 @@ export default function LinkedInSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">Recent LinkedIn Insights</span>
+            <span className="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">LinkedIn Highlights</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple to-pink mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -19,11 +19,11 @@ export default function LinkedInSection() {
             <div className="text-white text-sm">Years Experience</div>
           </div>
           <div className="bg-gradient-to-br from-blue/20 to-purple/20 border border-blue/30 rounded-xl p-6 text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-blue mb-2">20+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-blue mb-2">7+</div>
             <div className="text-white text-sm">Major Projects</div>
           </div>
           <div className="bg-gradient-to-br from-pink/20 to-orange/20 border border-pink/30 rounded-xl p-6 text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-pink mb-2">3000+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-pink mb-2">500+</div>
             <div className="text-white text-sm">LinkedIn Connections</div>
           </div>
         </div>

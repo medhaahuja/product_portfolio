@@ -26,7 +26,6 @@ export default function Header() {
             <button onClick={() => scrollToSection('about')} className="hover:text-purple transition-colors duration-300">About</button>
             <button onClick={() => scrollToSection('projects')} className="hover:text-purple transition-colors duration-300">Projects</button>
             <button onClick={() => scrollToSection('experience')} className="hover:text-purple transition-colors duration-300">Experience</button>
-            <button onClick={() => scrollToSection('achievements')} className="hover:text-purple transition-colors duration-300">Insights</button>
             <button onClick={() => scrollToSection('linkedin')} className="hover:text-purple transition-colors duration-300">LinkedIn</button>
           </div>
 
@@ -60,7 +59,6 @@ export default function Header() {
             <button onClick={() => scrollToSection('about')} className="block hover:text-purple transition-colors duration-300">About</button>
             <button onClick={() => scrollToSection('projects')} className="block hover:text-purple transition-colors duration-300">Projects</button>
             <button onClick={() => scrollToSection('experience')} className="block hover:text-purple transition-colors duration-300">Experience</button>
-            <button onClick={() => scrollToSection('achievements')} className="block hover:text-purple transition-colors duration-300">Insights</button>
             <button onClick={() => scrollToSection('linkedin')} className="block hover:text-purple transition-colors duration-300">LinkedIn</button>
           </div>
         )}
