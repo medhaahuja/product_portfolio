@@ -1,16 +1,15 @@
 import { useEffect } from "react";
 import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
-import AboutSection from "@/components/about-section";
-import ProjectsSection from "@/components/projects-section";
+import PhilosophySection from "@/components/philosophy-section";
+import ImpactBanner from "@/components/impact-banner";
+import CaseStudiesSection from "@/components/case-studies-section";
 import ExperienceSection from "@/components/experience-section";
-import LinkedInSection from "@/components/linkedin-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
   useEffect(() => {
-    // Scroll progress indicator
     const updateScrollProgress = () => {
       const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       const progressBar = document.getElementById('scroll-progress');
@@ -25,23 +24,14 @@ export default function Home() {
 
   return (
     <div className="bg-deep-black text-white font-inter overflow-x-hidden">
-      {/* Floating Particles Background */}
-      <div className="floating-particles">
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-      </div>
-
-      {/* Scroll Progress Indicator */}
       <div id="scroll-progress" className="scroll-progress" style={{ width: '0%' }}></div>
-
       <Header />
       <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
+      <PhilosophySection />
+      <ImpactBanner />
+      <CaseStudiesSection />
       <ExperienceSection />
-      <LinkedInSection />
+      <ContactSection />
       <Footer />
     </div>
   );
