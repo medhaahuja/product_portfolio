@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import PhilosophySection from "@/components/philosophy-section";
 import ImpactBanner from "@/components/impact-banner";
+import BuilderStrip from "@/components/builder-strip";
 import CaseStudiesSection from "@/components/case-studies-section";
 import ExperienceSection from "@/components/experience-section";
 import ContactSection from "@/components/contact-section";
@@ -29,6 +30,7 @@ export default function Home() {
       <HeroSection />
       <PhilosophySection />
       <ImpactBanner />
+      <BuilderStrip />
       <CaseStudiesSection />
       <ExperienceSection />
       <ContactSection />
