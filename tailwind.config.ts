@@ -44,6 +44,9 @@ export default {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
+        surface: "var(--surface)",
+        "surface-raised": "var(--surface-raised)",
+        amber: "var(--amber)",
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",
