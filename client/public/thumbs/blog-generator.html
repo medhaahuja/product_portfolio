@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,sans-serif;}
+body{width:720px;height:420px;overflow:hidden;background:#F9F6F1;}
+.shell{display:flex;height:420px;}
+.sidebar{width:200px;background:#fff;border-right:1px solid #EBE7E0;display:flex;flex-direction:column;flex-shrink:0;}
+.sb-header{padding:14px 16px;border-bottom:1px solid #EBE7E0;}
+.sb-logo{font-size:14px;font-weight:700;color:#1C1917;}
+.sb-logo span{color:#D97706;}
+.sb-new{background:#1C1917;color:#fff;font-size:10px;font-weight:600;padding:5px 12px;border-radius:8px;text-align:center;margin:12px 16px 8px;display:block;}
+.sb-section{font-size:9px;font-weight:600;color:#9C9489;letter-spacing:1px;text-transform:uppercase;padding:10px 16px 6px;}
+.sb-item{padding:7px 16px;font-size:11px;color:#57534E;display:flex;align-items:center;gap:8px;cursor:pointer;}
+.sb-item.active{background:#F9F6F1;color:#1C1917;font-weight:500;border-right:2px solid #D97706;}
+.sb-dot{width:6px;height:6px;border-radius:50%;background:#EBE7E0;flex-shrink:0;}
+.sb-dot.active{background:#D97706;}
+.sb-tag{font-size:8px;padding:2px 6px;border-radius:8px;margin-left:auto;}
+.sb-tag.draft{background:#FEF3C7;color:#92400E;}
+.sb-tag.pub{background:#D1FAE5;color:#065F46;}
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden;}
+.topbar{background:#fff;border-bottom:1px solid #EBE7E0;padding:0 20px;height:44px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.topbar-left{display:flex;align-items:center;gap:8px;}
+.breadcrumb{font-size:11px;color:#9C9489;}
+.breadcrumb span{color:#1C1917;font-weight:500;}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#10B981;}
+.status-text{font-size:10px;color:#10B981;font-weight:500;}
+.topbar-right{display:flex;gap:8px;align-items:center;}
+.btn{padding:5px 12px;border-radius:8px;font-size:11px;font-weight:500;}
+.btn-outline{border:1px solid #EBE7E0;background:#fff;color:#57534E;}
+.btn-primary{background:#1C1917;color:#fff;border:none;}
+.editor{flex:1;display:flex;overflow:hidden;}
+.editor-main{flex:1;padding:24px 28px;overflow:hidden;}
+.article-tag{background:#FEF3C7;color:#92400E;font-size:9px;font-weight:600;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:12px;}
+.article-title{font-size:20px;font-weight:700;color:#1C1917;line-height:1.3;margin-bottom:10px;}
+.article-meta{font-size:10px;color:#9C9489;margin-bottom:16px;display:flex;gap:12px;align-items:center;}
+.meta-sep{color:#D5D0CA;}
+.para{font-size:11px;color:#57534E;line-height:1.7;margin-bottom:10px;}
+.para strong{color:#1C1917;}
+.highlight-block{background:#FFFBEB;border-left:3px solid #D97706;padding:8px 12px;border-radius:0 6px 6px 0;margin-bottom:10px;}
+.highlight-block p{font-size:11px;color:#92400E;line-height:1.6;font-style:italic;}
+.side-panel{width:188px;background:#fff;border-left:1px solid #EBE7E0;display:flex;flex-direction:column;flex-shrink:0;}
+.panel-title{font-size:11px;font-weight:600;color:#1C1917;padding:14px 14px 10px;border-bottom:1px solid #EBE7E0;}
+.seo-score{padding:14px;}
+.score-circle{width:60px;height:60px;border-radius:50%;background:conic-gradient(#10B981 0% 87%,#E5E7EB 87% 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;position:relative;}
+.score-inner{width:46px;height:46px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;}
+.score-num{font-size:16px;font-weight:700;color:#1C1917;}
+.score-label{font-size:10px;color:#9C9489;text-align:center;margin-bottom:12px;}
+.check-item{display:flex;align-items:center;gap:6px;font-size:10px;color:#57534E;padding:4px 0;}
+.check-pass{width:14px;height:14px;border-radius:50%;background:#D1FAE5;color:#10B981;display:flex;align-items:center;justify-content:center;font-size:8px;flex-shrink:0;}
+.check-warn{width:14px;height:14px;border-radius:50%;background:#FEF3C7;color:#D97706;display:flex;align-items:center;justify-content:center;font-size:8px;flex-shrink:0;}
+.panel-section{padding:12px 14px;border-top:1px solid #EBE7E0;}
+.panel-section-title{font-size:9px;font-weight:600;color:#9C9489;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:8px;}
+.tag-chip{display:inline-block;background:#F9F6F1;border:1px solid #EBE7E0;border-radius:10px;font-size:9px;color:#57534E;padding:2px 8px;margin:2px 2px 2px 0;}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="sidebar">
+    <div class="sb-header">
+      <div class="sb-logo">Blog<span>Studio</span></div>
+    </div>
+    <div class="sb-new">+ New post</div>
+    <div class="sb-section">Recent Posts</div>
+    <div class="sb-item active"><div class="sb-dot active"></div>5 Skincare Tips...<div class="sb-tag draft">Draft</div></div>
+    <div class="sb-item"><div class="sb-dot"></div>Summer Glow Guide<div class="sb-tag pub">Live</div></div>
+    <div class="sb-item"><div class="sb-dot"></div>Nail Trends 2024<div class="sb-tag pub">Live</div></div>
+    <div class="sb-item"><div class="sb-dot"></div>Bridal Prep Checklist<div class="sb-tag draft">Draft</div></div>
+    <div class="sb-item"><div class="sb-dot"></div>Monsoon Hair Care<div class="sb-tag pub">Live</div></div>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="breadcrumb">Posts / <span>5 Skincare Tips...</span></div>
+        <div class="status-dot"></div>
+        <div class="status-text">Auto-saved</div>
+      </div>
+      <div class="topbar-right">
+        <div class="btn btn-outline">Preview</div>
+        <div class="btn btn-primary">Publish →</div>
+      </div>
+    </div>
+    <div class="editor">
+      <div class="editor-main">
+        <div class="article-tag">✨ AI-Generated Draft</div>
+        <div class="article-title">5 Skincare Tips Your Clients Ask<br>About Every Single Day</div>
+        <div class="article-meta">
+          <span>✍️ Priya's Beauty Studio</span>
+          <span class="meta-sep">·</span>
+          <span>3 min read</span>
+          <span class="meta-sep">·</span>
+          <span>SEO score 87</span>
+        </div>
+        <div class="para">After ten years behind the chair, I've noticed the same questions come up again and again. <strong>Clients want to know what actually works</strong> — not the expensive serums, not the 12-step routines, just the honest stuff that fits a real schedule.</div>
+        <div class="highlight-block">
+          <p>"Your skin barrier is doing more work than any product you'll ever buy. Protect it first."</p>
+        </div>
+        <div class="para">Here are the five tips I share with every client who asks, and why each one is backed by what I see in the studio every week.</div>
+      </div>
+      <div class="side-panel">
+        <div class="panel-title">SEO Readiness</div>
+        <div class="seo-score">
+          <div class="score-circle">
+            <div class="score-inner"><div class="score-num">87</div></div>
+          </div>
+          <div class="score-label">Good — ready to publish</div>
+          <div class="check-item"><div class="check-pass">✓</div>Focus keyword in title</div>
+          <div class="check-item"><div class="check-pass">✓</div>Meta description set</div>
+          <div class="check-item"><div class="check-pass">✓</div>Internal links added</div>
+          <div class="check-item"><div class="check-warn">!</div>Add 1 more image alt text</div>
+          <div class="check-item"><div class="check-pass">✓</div>Reading level: Good</div>
+        </div>
+        <div class="panel-section">
+          <div class="panel-section-title">Tags</div>
+          <div class="tag-chip">skincare</div>
+          <div class="tag-chip">beauty tips</div>
+          <div class="tag-chip">salon</div>
+          <div class="tag-chip">glowing skin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
