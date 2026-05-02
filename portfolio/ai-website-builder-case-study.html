@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AI Website Builder — Case Study · Medha Ahuja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:      #FAFAF8;
+      --surface: #F3F1EC;
+      --ink:     #111827;
+      --ink-2:   #374151;
+      --muted:   #9CA3AF;
+      --rule:    #E5E2DC;
+      --accent:  #6366F1;
+      --amber:   #F59E0B;
+      --green:   #10B981;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── BACK NAV ── */
+    .back-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,248,.92); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 40px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 500; color: var(--muted);
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--ink); }
+    .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+    .nav-cs-label { font-size: 13px; font-weight: 600; color: var(--ink-2); }
+
+    /* ── CONTAINER ── */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+
+    /* ── HERO ── */
+    .cs-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--rule); }
+    .cs-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .cs-eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--accent); display: block; }
+    .cs-hero h1 { font-family: 'Lora', Georgia, serif; font-size: clamp(32px, 5.5vw, 52px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.12; color: var(--ink); margin-bottom: 12px; }
+    .cs-hero h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .cs-meta { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 36px; }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .meta-value { font-size: 14px; color: var(--ink-2); }
+
+    /* ── STAT BAR ── */
+    .stat-bar { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; margin: 52px 0; }
+    .stat-item { background: #fff; padding: 28px 24px; display: flex; flex-direction: column; gap: 6px; }
+    .stat-num { font-size: 38px; font-weight: 700; line-height: 1; letter-spacing: -0.04em; color: var(--amber); }
+    .stat-lbl { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+    /* ── SECTION ── */
+    .section { padding: 56px 0; border-bottom: 1px solid var(--rule); }
+    .section:last-of-type { border-bottom: none; }
+    .section-num { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .section h2 { font-family: 'Lora', Georgia, serif; font-size: clamp(22px, 3.5vw, 30px); font-weight: 600; line-height: 1.2; margin-bottom: 24px; color: var(--ink); }
+    .section p { color: var(--ink-2); margin-bottom: 16px; font-weight: 400; font-size: 15px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .pull-quote { border-left: 2px solid var(--amber); padding: 4px 0 4px 24px; margin: 36px 0; }
+    .pull-quote p { font-family: 'Lora', Georgia, serif; font-size: clamp(17px, 2.8vw, 21px); line-height: 1.45; color: var(--ink); font-style: italic; }
+
+    /* Problem cards */
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+    .problem-card { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 24px; }
+    .problem-card .seg { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    .problem-card p { font-size: 14px; color: var(--ink-2); margin-bottom: 0; }
+
+    /* Architecture block */
+    .arch-block { background: var(--ink); border-radius: 14px; padding: 36px 32px; margin-top: 32px; }
+    .arch-title { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 28px; }
+    .arch-flow { display: flex; flex-direction: column; gap: 0; }
+    .arch-step { display: flex; align-items: flex-start; gap: 16px; position: relative; }
+    .arch-step:not(:last-child)::after { content: ''; position: absolute; left: 15px; top: 32px; bottom: -8px; width: 1px; background: #2E3440; }
+    .arch-dot { width: 30px; height: 30px; border-radius: 50%; background: #1F2937; border: 1px solid #374151; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--amber); margin-top: 2px; }
+    .arch-content { padding-bottom: 28px; flex: 1; }
+    .arch-step-title { font-size: 14px; font-weight: 600; color: #F3F4F6; margin-bottom: 5px; }
+    .arch-step-desc { font-size: 13px; color: #6B7280; line-height: 1.55; margin: 0; }
+
+    /* Agent grid */
+    .agent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+    .agent-card { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 20px; position: relative; overflow: hidden; }
+    .agent-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--rule); }
+    .agent-card.primary::before { background: var(--accent); }
+    .agent-name { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+    .agent-role { font-size: 13px; color: var(--ink-2); font-weight: 400; margin: 0; line-height: 1.55; }
+
+    /* Before/after */
+    .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; margin-top: 32px; }
+    .ba-col { background: #fff; padding: 28px 24px; }
+    .ba-col.after { background: rgba(99,102,241,.04); }
+    .ba-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+    .ba-col.after .ba-label { color: var(--accent); }
+    .ba-item { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; font-size: 14px; color: var(--ink-2); }
+    .ba-item::before { content: '—'; color: var(--muted); flex-shrink: 0; }
+    .ba-col.after .ba-item::before { content: '✓'; color: var(--accent); }
+    .ba-col.after .ba-item { color: var(--ink); font-weight: 500; }
+
+    /* Learnings */
+    .learning-list { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+    .learning-item { display: flex; gap: 20px; align-items: flex-start; }
+    .learning-num { font-family: 'Lora', Georgia, serif; font-size: 20px; color: var(--muted); line-height: 1.4; flex-shrink: 0; width: 28px; font-style: italic; }
+    .learning-text { font-size: 15px; color: var(--ink-2); margin: 0; }
+    .learning-text strong { color: var(--ink); font-weight: 600; }
+
+    /* ── FOOTER NAV ── */
+    .cs-footer { padding: 56px 0; border-top: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; }
+    .cs-footer-brand { font-size: 13px; color: var(--muted); }
+    .cs-footer-back { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--accent); transition: gap .2s; }
+    .cs-footer-back:hover { gap: 12px; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+    .cs-hero { animation: fadeUp .6s ease both; }
+    .stat-bar { animation: fadeUp .6s .1s ease both; }
+
+    @media (max-width: 640px) {
+      .problem-grid, .agent-grid, .before-after { grid-template-columns: 1fr; }
+      .stat-bar { grid-template-columns: 1fr; }
+      .cs-meta { flex-direction: column; gap: 14px; }
+      .back-nav { padding: 0 20px; }
+      .container { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BACK NAV -->
+<nav class="back-nav">
+  <a href="var-b.html" class="back-link">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Medha Ahuja
+  </a>
+  <span class="nav-cs-label">AI Website Builder</span>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="cs-hero">
+    <div class="cs-eyebrow">Product Case Study</div>
+    <h1>AI Website Builder —<br/><em>from 4 days to 24 hours</em></h1>
+    <div class="cs-meta">
+      <div class="meta-item">
+        <span class="meta-label">Company</span>
+        <span class="meta-value">Graphy (Unacademy)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Role</span>
+        <span class="meta-value">Product Manager</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Markets</span>
+        <span class="meta-value">India + United States</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Type</span>
+        <span class="meta-value">0 → 1 AI product</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stat-bar">
+    <div class="stat-item">
+      <span class="stat-num">24h</span>
+      <span class="stat-lbl">Average time to publish — down from 3–4 days</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+28%</span>
+      <span class="stat-lbl">Improvement in onboarded-to-published rate</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">0</span>
+      <span class="stat-lbl">Developers required to build or edit a website</span>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="section">
+    <div class="section-num">01 — Problem</div>
+    <h2>Two markets, two different problems</h2>
+    <p>Graphy serves creators in both the US and India — but the website builder was failing both segments, for entirely different reasons.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="seg">US Creators</div>
+        <p>Creators churned shortly after sign-up. The auto-generated website didn't reflect their brand or look professional enough to share. The first impression of their "business" on Graphy was underwhelming — and they left before ever publishing.</p>
+      </div>
+      <div class="problem-card">
+        <div class="seg">India Creators</div>
+        <p>The old builder offered templates and drag-and-drop editing — but meaningful customisation required a designer or developer. Website changes took 3 to 4 days. Creators were dependent on external resources for every update.</p>
+      </div>
+    </div>
+    <div class="pull-quote">
+      <p>"Creators think in terms of 'start selling' — not 'set up a platform.' Every day spent on the website is a day not spent on their course."</p>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="section">
+    <div class="section-num">02 — Solution</div>
+    <h2>A personalised website, generated in minutes</h2>
+    <p>We redesigned the entire website creation experience around a single insight: the creator already has a brand — it lives in their social content. Our job was to surface it, not ask them to recreate it.</p>
+    <div class="arch-block">
+      <div class="arch-title">How it works</div>
+      <div class="arch-flow">
+        <div class="arch-step">
+          <div class="arch-dot">1</div>
+          <div class="arch-content">
+            <div class="arch-step-title">Social data scraping</div>
+            <p class="arch-step-desc">During onboarding, creators share their social handles. We fetch their top posts and extract brand signals — tone, topics, content themes.</p>
+          </div>
+        </div>
+        <div class="arch-step">
+          <div class="arch-dot">2</div>
+          <div class="arch-content">
+            <div class="arch-step-title">Vibe selection</div>
+            <p class="arch-step-desc">Creators choose a visual direction (Playful, Professional, Minimal, Creative), pre-mapped to their industry. This determines which section templates are eligible for their site.</p>
+          </div>
+        </div>
+        <div class="arch-step">
+          <div class="arch-dot">3</div>
+          <div class="arch-content">
+            <div class="arch-step-title">Automated generation via stitching</div>
+            <p class="arch-step-desc">A background job assembles the homepage by stitching pre-built HTML section templates. An LLM fills static copy placeholders using scraped content; dynamic variables (course titles, pricing) are injected from the backend.</p>
+          </div>
+        </div>
+        <div class="arch-step">
+          <div class="arch-dot">4</div>
+          <div class="arch-content" style="padding-bottom:0">
+            <div class="arch-step-title">Chat-based editing</div>
+            <p class="arch-step-desc">Creators land in a chat-first editor. They type natural language instructions — "make the tone more formal", "add a pricing section" — and a multi-agent system handles the rest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="section">
+    <div class="section-num">03 — Architecture</div>
+    <h2>Multi-agent system under the hood</h2>
+    <p>The editor is powered by a coordinator-router pattern with three specialised sub-agents. Each agent has a single responsibility and operates on structured JSON patches — never raw HTML rewrites.</p>
+    <div class="agent-grid">
+      <div class="agent-card primary">
+        <div class="agent-name">Coordinator agent</div>
+        <p class="agent-role">Reads user intent, routes to exactly one sub-agent per turn. Never claims task completion without a confirmed tool call.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-name">Editor agent</div>
+        <p class="agent-role">Handles in-place edits — text, images, spacing, styles. Returns structured patches applied by the DOM layer.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-name">Section builder agent</div>
+        <p class="agent-role">Adds new sections — either from the pre-built template library or generated from scratch for custom requests.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-name">Reorder agent</div>
+        <p class="agent-role">Handles section ordering changes. Returns a new ordered list of section IDs; the DOM layer applies the reorder.</p>
+      </div>
+    </div>
+    <p style="margin-top:24px;font-size:15px;color:var(--ink-2)">A key architectural decision was section-level granularity over full-page generation — this keeps LLM token costs low, enables surgical edits, and cleanly separates static (LLM-managed) and dynamic (backend-managed) content within each page.</p>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section">
+    <div class="section-num">04 — Impact</div>
+    <h2>Before and after</h2>
+    <p>The shift wasn't incremental. For Indian creators, it removed the dependency on design resources entirely. For US creators, it closed the gap between signing up and having a site they'd actually share.</p>
+    <div class="before-after">
+      <div class="ba-col">
+        <div class="ba-label">Before</div>
+        <div class="ba-item">3–4 days to set up a website</div>
+        <div class="ba-item">Required a dedicated developer or designer</div>
+        <div class="ba-item">Drag-and-drop with limited flexibility</div>
+        <div class="ba-item">Generic templates, no personalisation</div>
+        <div class="ba-item">US creators churning before first publish</div>
+      </div>
+      <div class="ba-col after">
+        <div class="ba-label">After</div>
+        <div class="ba-item">Average 24 hours to publish</div>
+        <div class="ba-item">Zero external resources needed</div>
+        <div class="ba-item">Natural language editing via chat</div>
+        <div class="ba-item">Personalised from social content at onboarding</div>
+        <div class="ba-item">28% improvement in onboarded-to-published rate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNINGS -->
+  <section class="section">
+    <div class="section-num">05 — Learnings</div>
+    <h2>What I'd do differently</h2>
+    <div class="learning-list">
+      <div class="learning-item">
+        <div class="learning-num">01</div>
+        <p class="learning-text"><strong>Validate churn root cause more rigorously.</strong> We acted on CSM feedback that creators left because the website didn't look good. In hindsight, we should have triangulated against behavioural data — session recordings, publish rates, exit surveys — before committing to the solution direction.</p>
+      </div>
+      <div class="learning-item">
+        <div class="learning-num">02</div>
+        <p class="learning-text"><strong>Design for scale earlier.</strong> The template library is manually managed via an internal tool — workable at current size, but not at 10x. A template governance process and quality rubric should have been part of the v1 spec.</p>
+      </div>
+      <div class="learning-item">
+        <div class="learning-num">03</div>
+        <p class="learning-text"><strong>Think about data compliance from day one.</strong> The social scraping approach requires careful review of API terms of service and applicable data regulations. This should be a first-class product concern, not an afterthought.</p>
+      </div>
+      <div class="learning-item">
+        <div class="learning-num">04</div>
+        <p class="learning-text"><strong>Prompt engineering is product work.</strong> The coordinator's false-completion bug — claiming a task was done without calling a tool — was a product failure, not just an engineering one. Agent behaviour needs the same rigour as any other product surface.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="cs-footer">
+    <span class="cs-footer-brand">Medha Ahuja · Product Manager · Graphy (Unacademy)</span>
+    <a href="var-b.html" class="cs-footer-back">← Back to portfolio</a>
+  </div>
+
+</div>
+</body>
+</html>
