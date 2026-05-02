@@ -207,9 +207,8 @@
     .j-co   { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
     .j-desc { font-size: 14px; color: var(--ink2); line-height: 1.75; margin-bottom: 14px; }
     .exp-chips { display: flex; gap: 7px; flex-wrap: wrap; }
-    .exp-chip { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 100px; background: var(--card); color: var(--ink2); border: 1px solid var(--rule); }
-    .exp-chip.ind { background: var(--blue-bg); color: var(--blue); border-color: var(--blue-br); }
-    .exp-chip.amb { background: var(--amber-bg); color: var(--amber); border-color: var(--amber-br); }
+    .exp-chip { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 100px; background: transparent; color: var(--ink2); border: 1px solid var(--rule); }
+    .exp-chip.met { background: rgba(28,25,23,0.06); color: var(--ink); border-color: rgba(28,25,23,0.18); font-weight: 600; }
 
     /* ── CONTACT ── */
     .contact-card { background: var(--card); border-radius: 24px; padding: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -432,9 +431,9 @@
     <p style="font-size:16px;color:var(--ink2);line-height:1.7;margin-bottom:0;max-width:480px">The problem, the decisions, and what actually shipped.</p>
     <div class="cs-grid">
 
-      <div class="cs-card">
+      <div class="cs-card" style="border-color:#DDD9F5;">
         <div class="cs-thumb"><iframe src="thumbs/website-builder.html" scrolling="no"></iframe></div>
-        <div class="cs-body">
+        <div class="cs-body" style="background:#F4F2FB;">
           <div class="cs-eye">Graphy · Unacademy · 2024 · 0→1</div>
           <div class="cs-name">AI Website Builder</div>
           <p class="cs-blurb">The website builder was failing US and India creators for opposite reasons. I redesigned it using multi-agent AI. 24h to publish, ₹50L GMV/month, zero developers required.</p>
@@ -442,9 +441,9 @@
         </div>
       </div>
 
-      <div class="cs-card">
+      <div class="cs-card" style="border-color:#F0E4C0;">
         <div class="cs-thumb"><iframe src="thumbs/workout-buddy.html" scrolling="no"></iframe></div>
-        <div class="cs-body">
+        <div class="cs-body" style="background:#FFF8EC;">
           <div class="cs-eye">Cult.fit · Concept · 2024 · Retention</div>
           <div class="cs-name">Workout Buddy</div>
           <p class="cs-blurb">Users don't struggle with wanting to work out. They struggle with showing up. 10–15 interviews, one root cause: no accountability once the class is booked.</p>
@@ -452,9 +451,9 @@
         </div>
       </div>
 
-      <div class="cs-card">
+      <div class="cs-card" style="border-color:#C8D9EC;">
         <div class="cs-thumb"><iframe src="thumbs/expense.html" scrolling="no"></iframe></div>
-        <div class="cs-body">
+        <div class="cs-body" style="background:#EEF3F9;">
           <div class="cs-eye">PM Exercise · 2024 · B2B SaaS</div>
           <div class="cs-name">Expense Management Platform</div>
           <p class="cs-blurb">Mid-market companies managing expenses on Excel and email. Nobody had designed the end-to-end system. I mapped 3 user journeys, scoped an 8-week MVP, and built a full GTM plan.</p>
@@ -462,9 +461,9 @@
         </div>
       </div>
 
-      <div class="cs-card">
+      <div class="cs-card" style="border-color:#E8DFD0;">
         <div class="cs-thumb"><iframe src="thumbs/blog-generator.html" scrolling="no"></iframe></div>
-        <div class="cs-body">
+        <div class="cs-body" style="background:#FAF6EF;">
           <div class="cs-eye">Personal Project · 2024 · Live</div>
           <div class="cs-name">AI Blog Generator</div>
           <p class="cs-blurb">Small beauty &amp; wellness businesses skip blogging, not because they doubt it, but because staring at a blank page after a 10-hour shift isn't happening. Zero to published in &lt;5 min.</p>
@@ -498,16 +497,16 @@
         </div>
         <div class="j-chips">
           <div class="exp-chips">
-            <span class="exp-chip ind">₹50L GMV in 3 months</span>
-            <span class="exp-chip ind">60% support reduction</span>
-            <span class="exp-chip ind">+28% activation</span>
-            <span class="exp-chip ind">5M+ users in 60 days</span>
-            <span class="exp-chip amb">Generative AI</span>
-            <span class="exp-chip amb">LLM</span>
-            <span class="exp-chip amb">RAG</span>
-            <span class="exp-chip amb">Prompt Engineering</span>
-            <span class="exp-chip amb">PLG</span>
-            <span class="exp-chip amb">0→1</span>
+            <span class="exp-chip met">₹50L GMV in 3 months</span>
+            <span class="exp-chip met">60% support reduction</span>
+            <span class="exp-chip met">+28% activation</span>
+            <span class="exp-chip met">5M+ users in 60 days</span>
+            <span class="exp-chip">Generative AI</span>
+            <span class="exp-chip">LLM</span>
+            <span class="exp-chip">RAG</span>
+            <span class="exp-chip">Prompt Engineering</span>
+            <span class="exp-chip">PLG</span>
+            <span class="exp-chip">0→1</span>
             <span class="exp-chip">Product Roadmap</span>
             <span class="exp-chip">Stakeholder Management</span>
             <span class="exp-chip">Cross-functional</span>
@@ -531,11 +530,11 @@
         </div>
         <div class="j-chips">
           <div class="exp-chips">
-            <span class="exp-chip amb">₹10M+ Revenue</span>
-            <span class="exp-chip amb">1M+ Users in Q1</span>
-            <span class="exp-chip amb">-35% drop-offs</span>
-            <span class="exp-chip amb">+30% session time</span>
-            <span class="exp-chip amb">+22% retention</span>
+            <span class="exp-chip met">₹10M+ Revenue</span>
+            <span class="exp-chip met">1M+ Users in Q1</span>
+            <span class="exp-chip met">-35% drop-offs</span>
+            <span class="exp-chip met">+30% session time</span>
+            <span class="exp-chip met">+22% retention</span>
             <span class="exp-chip">Agile / Scrum</span>
             <span class="exp-chip">Sprint Planning</span>
             <span class="exp-chip">A/B Testing</span>
@@ -560,7 +559,7 @@
         </div>
         <div class="j-chips">
           <div class="exp-chips">
-            <span class="exp-chip amb">-40% review time</span>
+            <span class="exp-chip met">-40% review time</span>
             <span class="exp-chip">Amplitude</span>
             <span class="exp-chip">Funnel Analysis</span>
             <span class="exp-chip">KPIs / OKRs</span>
